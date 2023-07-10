@@ -1,8 +1,8 @@
-// src/components/App.jsx
+
 import React, { Component } from 'react';
-import ContactForm from './ContactForm';
-import ContactList from './ContactList';
-import Filter from './Filter';
+import ContactForm from '../contact-form/ContactForm';
+import ContactList from '../contact-list/ContactList';
+import Filter from '../filter/Filter';
 import styles from './App.module.css';
 
 class App extends Component {

@@ -1,7 +1,7 @@
-// src/components/ContactList.js
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ContactItem from './ContactItem';
+import ContactItem from '../contact-item/ContactItem';
 import styles from './ContactList.module.css';
 
 class ContactList extends Component {

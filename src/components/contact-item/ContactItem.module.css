@@ -1,11 +1,5 @@
-/* src/components/ContactList.module.css */
-.list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
-.list-item {
+.item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +7,7 @@
     border-bottom: 1px solid #ccc;
 }
 
-.list-item:last-child {
+.item:last-child {
     border-bottom: none;
 }
 
@@ -23,4 +17,12 @@
 
 .number {
     color: #888;
+}
+
+.button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }

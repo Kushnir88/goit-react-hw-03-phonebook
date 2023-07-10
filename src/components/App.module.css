@@ -1,0 +1,14 @@
+/* src/App.module.css */
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    margin-top: 30px;
+}

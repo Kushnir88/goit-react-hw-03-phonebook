@@ -1,0 +1,26 @@
+/* src/components/ContactList.module.css */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.number {
+    color: #888;
+}

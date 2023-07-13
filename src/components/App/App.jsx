@@ -1,5 +1,6 @@
 // src/components/App/App.jsx
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 import ContactForm from '../contact-form/ContactForm';
 import ContactList from '../contact-list/ContactList';
 import Filter from '../filter/Filter';
@@ -21,6 +22,13 @@ class App extends Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { contacts } = this.state;
+    if (prevState.contacts !== contacts) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
+  }
+
   handleAddContact = (name, number) => {
     const { contacts } = this.state;
     const isDuplicate = contacts.some((contact) => contact.name === name);
@@ -29,7 +37,7 @@ class App extends Component {
       alert('Contact with the same name already exists!');
     } else {
       const newContact = {
-        id: `id-${Date.now()}`,
+        id: nanoid(),
         name,
         number,
       };

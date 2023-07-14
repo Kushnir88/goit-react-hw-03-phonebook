@@ -30,22 +30,26 @@ class App extends Component {
   }
 
   handleAddContact = (name, number) => {
-    const { contacts } = this.state;
-    const isDuplicate = contacts.some((contact) => contact.name === name);
+  const { contacts } = this.state;
+  const isDuplicate = contacts.some((contact) => contact.name === name);
 
-    if (isDuplicate) {
-      alert('Contact with the same name already exists!');
-    } else {
-      const newContact = {
-        id: nanoid(),
-        name,
-        number,
-      };
-      this.setState((prevState) => ({
-        contacts: [...prevState.contacts, newContact],
-      }));
-    }
-  };
+  if (isDuplicate) {
+    alert('Contact with the same name already exists!');
+  } else {
+    const newContact = {
+      id: nanoid(),
+      name,
+      number,
+    };
+    this.setState((prevState) => ({
+      contacts: [...prevState.contacts, newContact],
+    }));
+  }
+
+  // Очищення полів форми
+  this.setState({ name: '', number: '' });
+};
+
 
   handleRemoveContact = (contactId) => {
     this.setState((prevState) => ({
